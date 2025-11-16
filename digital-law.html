@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI applications in digital law: platform regulation, content moderation, privacy, and algorithmic due diligence">
+    <title>AI in Digital Law | AI in Legal Practice</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">AI in Legal Practice</h1>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="what-is-ai.html">What is AI?</a></li>
+                        <li><a href="digital-law.html" class="active">Digital Law</a></li>
+                        <li><a href="intellectual-property.html">Intellectual Property</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                        <li><a href="ethics.html">Ethics</a></li>
+                        <li><a href="demo.html">Interactive Demo</a></li>
+                        <li><a href="glossary.html">Glossary</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <article class="page-article">
+            <div class="container">
+                <h2>AI in Digital Law</h2>
+
+                <section class="content-section">
+                    <p class="intro">Digital law encompasses the regulation of online platforms, data privacy, content governance, and digital rights. AI has become central to how these legal frameworks are implemented and enforced at scale. This section examines four key areas where AI intersects with digital law.</p>
+                </section>
+
+                <section class="content-section">
+                    <h3>1. Platform Regulation and Content Moderation</h3>
+
+                    <h4>The Scale Challenge</h4>
+                    <p>Digital platforms host billions of user-generated content items daily. YouTube alone sees 500 hours of video uploaded every minute. Human moderation at this scale is impossible, making AI-driven content moderation essential for platform governance.</p>
+
+                    <h4>How AI Content Moderation Works</h4>
+                    <p>Platforms employ multiple AI systems to detect and manage prohibited content:</p>
+
+                    <ul>
+                        <li><strong>Image and Video Analysis:</strong> Computer vision models detect violent imagery, explicit content, trademarked logos, and copyrighted material</li>
+                        <li><strong>Text Analysis:</strong> Natural language processing identifies hate speech, harassment, misinformation, and spam</li>
+                        <li><strong>Behavioral Analysis:</strong> Systems flag suspicious patterns (coordinated inauthentic behavior, bot networks, brigading)</li>
+                        <li><strong>Audio Analysis:</strong> Models detect copyrighted music, harmful audio content, and voice-based violations</li>
+                    </ul>
+
+                    <!-- Placeholder for content moderation flowchart -->
+                    <div class="visual-placeholder">
+                        <p><em>[Flowchart: Content Moderation Pipeline - Upload → Automated Scanning → Risk Scoring → Action (Allow/Review/Remove) → Human Review (if flagged) → Appeal Process]</em></p>
+                    </div>
+
+                    <h4>Real-World Examples</h4>
+
+                    <div class="case-study">
+                        <h5>YouTube Content ID</h5>
+                        <p>YouTube's Content ID system scans uploaded videos against a database of copyrighted content. Rights holders can choose to block, monetize, or track matching content. The system processes hundreds of millions of videos, making automated decisions about copyright without human review in most cases.</p>
+                        <p><strong>Legal issues:</strong> False positives affecting fair use, lack of human oversight, power imbalance between rights holders and creators.</p>
+                    </div>
+
+                    <div class="case-study">
+                        <h5>Meta's Automated Moderation</h5>
+                        <p>Meta (Facebook/Instagram) uses AI to proactively identify and remove content violating community standards. The company claims AI detects 95% of hate speech and 99% of terrorist content before users report it.</p>
+                        <p><strong>Legal issues:</strong> Over-removal of legitimate speech, cultural and linguistic bias, limited transparency about decision-making.</p>
+                    </div>
+
+                    <div class="case-study">
+                        <h5>Twitter/X Community Notes</h5>
+                        <p>While primarily crowdsourced, Twitter's Community Notes system uses algorithms to surface fact-checks and context. This hybrid approach combines AI ranking with human judgment.</p>
+                        <p><strong>Legal issues:</strong> Misinformation liability, editorial control questions, platform immunity under Section 230.</p>
+                    </div>
+
+                    <h4>Legal Framework</h4>
+                    <p>Platform content moderation exists in a complex legal environment:</p>
+
+                    <ul>
+                        <li><strong>Section 230 (US):</strong> Protects platforms from liability for user content, but doesn't require content moderation</li>
+                        <li><strong>Digital Services Act (EU):</strong> Requires large platforms to assess systemic risks, provide transparency reports, and allow appeals of moderation decisions</li>
+                        <li><strong>NetzDG (Germany):</strong> Mandates removal of "manifestly unlawful" content within 24 hours</li>
+                        <li><strong>Online Safety Bill (UK):</strong> Imposes duty of care on platforms to protect users from harmful content</li>
+                    </ul>
+
+                    <h4>Challenges and Controversies</h4>
+
+                    <p><strong>The "Moderator's Dilemma":</strong> Platforms face contradictory pressures—removing too little content draws regulatory scrutiny and advertiser concern; removing too much triggers censorship accusations and legal challenges.</p>
+
+                    <p><strong>Context Collapse:</strong> AI systems struggle with context-dependent content. Satire, news reporting, educational content, and artistic expression may be incorrectly flagged. The same image (e.g., historical war photography) might be appropriate in a documentary but prohibited in other contexts.</p>
+
+                    <p><strong>Cultural and Linguistic Bias:</strong> Most AI moderation systems are trained primarily on English-language content from Western contexts. They perform poorly on minority languages, cultural references, and non-Western norms.</p>
+
+                    <p><strong>Adversarial Evasion:</strong> Users develop techniques to evade automated moderation: substituting characters with symbols, using coded language, or slight image modifications. This creates an arms race between platform AI and users attempting to bypass it.</p>
+                </section>
+
+                <section class="content-section">
+                    <h3>2. Privacy and Data Protection</h3>
+
+                    <h4>AI as Privacy Threat and Tool</h4>
+                    <p>AI presents a paradox for privacy law: it enables both unprecedented surveillance and automated privacy protection.</p>
+
+                    <h4>Privacy Threats</h4>
+
+                    <div class="info-box">
+                        <h5>Inference and Re-identification</h5>
+                        <p>AI can infer sensitive attributes (health conditions, sexual orientation, political views) from seemingly innocuous data. Models can re-identify "anonymized" datasets by cross-referencing multiple sources, undermining traditional privacy protections.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h5>Surveillance and Tracking</h5>
+                        <p>Facial recognition, gait analysis, and behavioral tracking enable persistent identification across contexts. AI-powered surveillance systems monitor public spaces, workplaces, and digital environments.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h5>Profiling and Discrimination</h5>
+                        <p>Automated profiling systems categorize individuals for targeted advertising, credit decisions, employment screening, and law enforcement—often reproducing historical biases.</p>
+                    </div>
+
+                    <h4>AI for Privacy Protection</h4>
+
+                    <p>Conversely, AI enables privacy-enhancing technologies:</p>
+
+                    <ul>
+                        <li><strong>Automated GDPR Compliance:</strong> AI tools identify personal data in databases, generate privacy impact assessments, and process data subject requests (access, deletion, portability)</li>
+                        <li><strong>Differential Privacy:</strong> AI models trained with noise injection to prevent re-identification of individuals in training data</li>
+                        <li><strong>Federated Learning:</strong> AI models trained across decentralized devices without centralizing raw data</li>
+                        <li><strong>Privacy-Preserving Analytics:</strong> AI analysis of encrypted or anonymized data for insights without compromising individual privacy</li>
+                    </ul>
+
+                    <h4>GDPR Article 22: Automated Decision-Making</h4>
+
+                    <p>The GDPR's Article 22 addresses automated decisions "which produces legal effects concerning [the individual] or similarly significantly affects him or her." Key provisions:</p>
+
+                    <ul>
+                        <li>Individuals have the right not to be subject to solely automated decisions in certain contexts</li>
+                        <li>Exceptions exist for contract necessity, legal authorization, or explicit consent</li>
+                        <li>When automated decisions are permitted, individuals have rights to explanation, human review, and contestation</li>
+                    </ul>
+
+                    <p><strong>Enforcement challenges:</strong> What constitutes "solely automated"? How detailed must explanations be? What level of human involvement is meaningful versus rubber-stamping?</p>
+
+                    <h4>Emerging Privacy Regulations</h4>
+
+                    <ul>
+                        <li><strong>California CPRA:</strong> Automated decision-making transparency requirements similar to GDPR</li>
+                        <li><strong>Brazil's LGPD:</strong> Transparency rights for automated decisions affecting data subjects</li>
+                        <li><strong>China's PIPL:</strong> Requires transparency and opt-out for algorithmic recommendations</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h3>3. Algorithmic Due Diligence and Compliance</h3>
+
+                    <h4>Regulatory Compliance Automation</h4>
+                    <p>As regulations grow more complex, organizations deploy AI for compliance monitoring:</p>
+
+                    <ul>
+                        <li><strong>Transaction Monitoring:</strong> AI detects potential money laundering, fraud, and sanctions violations in financial systems</li>
+                        <li><strong>Contract Compliance:</strong> AI reviews contracts to ensure regulatory adherence (data processing agreements, accessibility requirements)</li>
+                        <li><strong>Risk Assessment:</strong> AI evaluates third-party vendors, supply chains, and business relationships for compliance risks</li>
+                        <li><strong>Document Analysis:</strong> AI processes regulatory filings, disclosure requirements, and reporting obligations</li>
+                    </ul>
+
+                    <h4>Algorithmic Auditing</h4>
+
+                    <p>Regulators and civil society increasingly demand algorithmic accountability through audits:</p>
+
+                    <div class="info-box">
+                        <h5>Bias Audits</h5>
+                        <p>Testing AI systems for discriminatory outcomes across protected characteristics (race, gender, age). New York City's Local Law 144 requires bias audits for automated employment decision tools.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h5>Impact Assessments</h5>
+                        <p>Evaluating potential harms before deploying high-risk AI systems. Required under the EU AI Act and Canada's AIDA for certain applications.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h5>Transparency Reports</h5>
+                        <p>Platforms must disclose how their algorithms work, what data they use, and their performance metrics. Mandated by the Digital Services Act for very large online platforms.</p>
+                    </div>
+
+                    <h4>Challenges in Algorithmic Governance</h4>
+
+                    <p><strong>The Auditing Gap:</strong> Many AI systems are proprietary black boxes. Companies resist disclosure citing trade secrets. Independent audits may lack access to training data, model internals, or deployment context.</p>
+
+                    <p><strong>Gaming and Goodhart's Law:</strong> When metrics become targets, they cease to be good metrics. AI systems optimized for audit performance may behave differently in real deployment.</p>
+
+                    <p><strong>Expertise Requirements:</strong> Effective algorithmic auditing requires both technical AI expertise and domain knowledge (legal, medical, financial). Few auditors possess both.</p>
+                </section>
+
+                <section class="content-section">
+                    <h3>4. Digital Rights Management and Access Control</h3>
+
+                    <h4>AI-Powered DRM</h4>
+
+                    <p>Digital Rights Management (DRM) systems use AI to enforce access controls and usage restrictions:</p>
+
+                    <ul>
+                        <li><strong>Watermarking and Fingerprinting:</strong> AI embeds and detects digital watermarks in media, tracking distribution and identifying leaks</li>
+                        <li><strong>Authentication:</strong> Biometric AI (facial recognition, voice, behavioral patterns) controls access to digital content and services</li>
+                        <li><strong>Usage Monitoring:</strong> AI tracks how content is used, detecting violations of licensing terms</li>
+                        <li><strong>Anti-Circumvention:</strong> AI identifies and blocks attempts to bypass DRM protections</li>
+                    </ul>
+
+                    <h4>Legal Tensions</h4>
+
+                    <p>DRM sits at the intersection of copyright, consumer rights, and competition law:</p>
+
+                    <ul>
+                        <li><strong>Anti-circumvention laws</strong> (DMCA Section 1201, EU Copyright Directive Article 6) prohibit bypassing DRM, even for legitimate purposes</li>
+                        <li><strong>Fair use and exceptions</strong> may be technically blocked by DRM, creating tension between legal rights and technological enforcement</li>
+                        <li><strong>Interoperability and competition</strong> concerns arise when DRM locks users into proprietary ecosystems</li>
+                        <li><strong>Privacy implications</strong> of pervasive monitoring and authentication systems</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h3>Looking Ahead</h3>
+
+                    <p>AI's role in digital law continues to expand and evolve. Emerging areas include:</p>
+
+                    <ul>
+                        <li>Generative AI creating new content moderation challenges (deepfakes, AI-generated misinformation)</li>
+                        <li>Decentralized systems (blockchain, Web3) complicating traditional platform governance</li>
+                        <li>Real-time translation and cultural adaptation by AI raising new questions about content standards</li>
+                        <li>AI-mediated dispute resolution for platform governance decisions</li>
+                    </ul>
+
+                    <p>The fundamental tension persists: AI enables unprecedented scale and efficiency in legal enforcement, but often at the cost of nuance, context, and individual justice. Striking the right balance requires ongoing dialogue among technologists, legal scholars, policymakers, and affected communities.</p>
+                </section>
+
+                <div class="page-navigation">
+                    <a href="what-is-ai.html" class="prev-link">← What is AI?</a>
+                    <a href="intellectual-property.html" class="next-link">AI in Intellectual Property →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-text">This project is part of the Humanities in the Age of AI course from UCF, designed and developed by Isabelle Bianca Sampaio (<a href="https://github.com/isabellebisam" target="_blank" rel="noopener">@isabellebisam</a>). All rights reserved. 2025.</p>
+            <p class="version">Version 1.0</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+</body>
+</html>

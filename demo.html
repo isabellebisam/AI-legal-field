@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive copyright enforcement simulator - experience AI-driven legal decision-making">
+    <title>Interactive Demo | AI in Legal Practice</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">AI in Legal Practice</h1>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="what-is-ai.html">What is AI?</a></li>
+                        <li><a href="digital-law.html">Digital Law</a></li>
+                        <li><a href="intellectual-property.html">Intellectual Property</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                        <li><a href="ethics.html">Ethics</a></li>
+                        <li><a href="demo.html" class="active">Interactive Demo</a></li>
+                        <li><a href="glossary.html">Glossary</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <article class="page-article">
+            <div class="container">
+                <h2>Copyright Enforcement Simulator</h2>
+
+                <section class="content-section demo-intro">
+                    <h3>About This Simulation</h3>
+                    <p>Welcome to the Copyright Enforcement Simulator, an interactive experience that puts you in the role of a content moderator overseeing an automated copyright enforcement system. Your task is to review the AI's recommendations and decide whether to accept or override them.</p>
+
+                    <p>This simulation abstracts real-world scenarios faced by platforms like YouTube, Instagram, and SoundCloud, where millions of copyright decisions are made daily by automated systems. Through this experience, you'll gain insight into:</p>
+
+                    <ul>
+                        <li>How AI systems make copyright enforcement decisions</li>
+                        <li>The tension between automation efficiency and accuracy</li>
+                        <li>How system parameters affect false positives and false negatives</li>
+                        <li>The real-world consequences of algorithmic errors</li>
+                        <li>The challenges of balancing rights holder protection with fair use</li>
+                    </ul>
+
+                    <h3>How to Play</h3>
+                    <ol>
+                        <li><strong>Review the content:</strong> Each case presents a piece of uploaded content (music, video, image, or text)</li>
+                        <li><strong>See the AI's recommendation:</strong> The system suggests an action (Takedown, Monetization Claim, or Allow) with a confidence score</li>
+                        <li><strong>Make your decision:</strong> Accept the AI's recommendation or Override it with your own judgment</li>
+                        <li><strong>Learn the outcome:</strong> Discover whether the content was actually infringing and see the consequences</li>
+                        <li><strong>Adjust parameters:</strong> Modify system settings to see how they affect AI performance</li>
+                        <li><strong>Track your performance:</strong> Compare your accuracy against AI-only and human-only baselines</li>
+                    </ol>
+
+                    <div class="demo-note">
+                        <strong>Note:</strong> This is a simplified simulation. Real copyright decisions involve complex legal analysis including fair use factors, licensing agreements, jurisdiction-specific rules, and contextual nuances that cannot be fully captured in an automated system or brief simulation.
+                    </div>
+                </section>
+
+                <section class="demo-controls">
+                    <h3>System Parameters</h3>
+                    <p>Adjust these parameters to see how they affect the AI's decision-making:</p>
+
+                    <div class="controls-grid">
+                        <div class="control-group">
+                            <label for="sensitivity">Detection Sensitivity</label>
+                            <input type="range" id="sensitivity" min="1" max="100" value="70" class="slider">
+                            <div class="slider-labels">
+                                <span>Low (More permissive)</span>
+                                <span id="sensitivity-value">70</span>
+                                <span>High (More strict)</span>
+                            </div>
+                            <p class="control-description">Higher sensitivity increases detection but also false positives</p>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="fairUse">Fair Use Threshold</label>
+                            <input type="range" id="fairUse" min="1" max="100" value="50" class="slider">
+                            <div class="slider-labels">
+                                <span>Strict</span>
+                                <span id="fairUse-value">50</span>
+                                <span>Permissive</span>
+                            </div>
+                            <p class="control-description">How much transformation is required for fair use protection</p>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="modelType">Model Type</label>
+                            <select id="modelType" class="model-select">
+                                <option value="fast">Fast & Less Accurate</option>
+                                <option value="balanced" selected>Balanced</option>
+                                <option value="slow">Slow & More Accurate</option>
+                            </select>
+                            <p class="control-description">Tradeoff between processing speed and accuracy</p>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="trainingData">Training Data Quality</label>
+                            <select id="trainingData" class="model-select">
+                                <option value="biased">Biased/Limited</option>
+                                <option value="moderate" selected>Moderate Quality</option>
+                                <option value="diverse">Diverse/Comprehensive</option>
+                            </select>
+                            <p class="control-description">Quality and diversity of data used to train the AI</p>
+                        </div>
+                    </div>
+
+                    <button id="resetParams" class="btn-secondary">Reset to Defaults</button>
+                </section>
+
+                <section class="demo-game">
+                    <div id="gameStatus" class="game-status">
+                        <div class="status-item">
+                            <span class="status-label">Cases Reviewed:</span>
+                            <span id="casesReviewed" class="status-value">0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Your Accuracy:</span>
+                            <span id="userAccuracy" class="status-value">-</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">AI Accuracy:</span>
+                            <span id="aiAccuracy" class="status-value">-</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">False Positives:</span>
+                            <span id="falsePositives" class="status-value">0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">False Negatives:</span>
+                            <span id="falseNegatives" class="status-value">0</span>
+                        </div>
+                    </div>
+
+                    <div id="p5Container" class="p5-container">
+                        <!-- P5.js canvas will be inserted here -->
+                    </div>
+
+                    <div id="caseDisplay" class="case-display">
+                        <div class="case-info">
+                            <h4 id="caseTitle">Loading case...</h4>
+                            <p id="caseDescription"></p>
+                            <div class="case-metadata">
+                                <span id="contentType"></span>
+                                <span id="uploadContext"></span>
+                            </div>
+                        </div>
+
+                        <div class="ai-recommendation">
+                            <h4>AI Recommendation</h4>
+                            <div class="recommendation-content">
+                                <div id="aiAction" class="ai-action">Analyzing...</div>
+                                <div class="confidence-meter">
+                                    <label>Confidence:</label>
+                                    <div class="confidence-bar">
+                                        <div id="confidenceLevel" class="confidence-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span id="confidenceValue">0%</span>
+                                </div>
+                                <p id="aiReasoning" class="ai-reasoning"></p>
+                            </div>
+                        </div>
+
+                        <div class="decision-buttons">
+                            <button id="acceptBtn" class="btn-primary">Accept AI Recommendation</button>
+                            <button id="overrideBtn" class="btn-secondary">Override Decision</button>
+                        </div>
+
+                        <div id="overrideOptions" class="override-options" style="display: none;">
+                            <h4>Your Decision:</h4>
+                            <button class="override-choice" data-action="allow">Allow (Fair Use / No Infringement)</button>
+                            <button class="override-choice" data-action="claim">Monetization Claim</button>
+                            <button class="override-choice" data-action="takedown">Takedown (Infringement)</button>
+                        </div>
+
+                        <div id="resultDisplay" class="result-display" style="display: none;">
+                            <!-- Results will be shown here after decision -->
+                        </div>
+
+                        <button id="nextCase" class="btn-primary" style="display: none;">Next Case</button>
+                    </div>
+
+                    <button id="startDemo" class="btn-large">Start Simulation</button>
+                    <button id="endDemo" class="btn-secondary" style="display: none;">End Simulation & See Results</button>
+                </section>
+
+                <section class="content-section demo-explanation">
+                    <h3>How This Demo Works</h3>
+
+                    <h4>What We're Simulating</h4>
+                    <p>This demo abstracts the copyright enforcement systems used by major platforms:</p>
+
+                    <ul>
+                        <li><strong>Content matching:</strong> Real systems use audio fingerprinting, visual hashing, and text comparison to detect potential matches</li>
+                        <li><strong>Automated decisions:</strong> Platforms process millions of claims without human review, relying on AI to classify content</li>
+                        <li><strong>Rights holder claims:</strong> Copyright owners upload reference files and set enforcement policies</li>
+                        <li><strong>Creator appeals:</strong> Users can contest decisions, but appeals may be slow or ineffective</li>
+                    </ul>
+
+                    <h4>Simplifications and Limitations</h4>
+                    <p>This simulation necessarily simplifies complex realities:</p>
+
+                    <ul>
+                        <li><strong>Legal complexity:</strong> Fair use requires analyzing purpose, nature, amount, and market effect—context-specific judgments beyond simple automation</li>
+                        <li><strong>Multiple jurisdictions:</strong> Copyright law varies across countries; platforms must navigate conflicting legal regimes</li>
+                        <li><strong>Licensing:</strong> Real decisions involve licensing databases, rights territories, and complex contractual relationships</li>
+                        <li><strong>Human judgment:</strong> In reality, some cases receive human review, though the majority are fully automated</li>
+                        <li><strong>Appeal processes:</strong> This demo shows immediate outcomes; real appeals can take weeks and may be equally opaque</li>
+                    </ul>
+
+                    <h4>What You Can Learn</h4>
+
+                    <p>Despite these simplifications, the demo illustrates important concepts:</p>
+
+                    <ul>
+                        <li><strong>Tradeoffs:</strong> Increasing sensitivity reduces infringement but harms legitimate creators through false positives</li>
+                        <li><strong>Parameter effects:</strong> System design choices have real consequences for whose content gets removed</li>
+                        <li><strong>Bias impacts:</strong> Training data quality affects which types of content and creators are treated fairly</li>
+                        <li><strong>Automation limits:</strong> Some decisions are genuinely difficult even for humans; expecting perfect AI is unrealistic</li>
+                        <li><strong>Stakes:</strong> Errors affect real people—creators lose income, speech is suppressed, rights holders lose control</li>
+                    </ul>
+
+                    <h4>Connection to Course Themes</h4>
+
+                    <p>This simulation connects to broader themes in AI and law:</p>
+
+                    <ul>
+                        <li><strong>Transparency:</strong> How much should platforms disclose about their detection systems?</li>
+                        <li><strong>Accountability:</strong> Who is responsible when the AI gets it wrong?</li>
+                        <li><strong>Due process:</strong> Do creators have meaningful opportunity to contest automated decisions?</li>
+                        <li><strong>Power dynamics:</strong> Large rights holders can enforce claims at scale; individual creators have limited recourse</li>
+                        <li><strong>Regulatory responses:</strong> Should law mandate human review, require explanations, or limit automation?</li>
+                    </ul>
+                </section>
+
+                <section class="content-section reflection">
+                    <h3>Reflection Questions</h3>
+                    <p>After completing the simulation, consider:</p>
+
+                    <ol>
+                        <li>How often did you agree with the AI's recommendations? When did you override them, and why?</li>
+                        <li>Did you notice any patterns in the types of cases where the AI performed well versus poorly?</li>
+                        <li>How did adjusting the parameters affect outcomes? What tradeoffs did you observe?</li>
+                        <li>If you were a platform designer, how would you balance copyright enforcement with protecting fair use and free expression?</li>
+                        <li>What information would you need to feel confident making copyright decisions? Was that information available in the simulation?</li>
+                        <li>How would you feel if your creative work or livelihood depended on these automated systems? What safeguards would you want?</li>
+                        <li>Should platforms be required to use less accurate but more explainable AI systems for copyright decisions? Why or why not?</li>
+                        <li>Who should have power to design and oversee these systems—platforms, governments, independent auditors, affected communities?</li>
+                    </ol>
+                </section>
+
+                <section class="content-section further-exploration">
+                    <h3>Further Exploration</h3>
+                    <p>To learn more about the issues raised in this simulation:</p>
+
+                    <ul>
+                        <li>Review the <a href="intellectual-property.html">Intellectual Property</a> section for detailed analysis of AI and copyright</li>
+                        <li>Explore the <a href="ethics.html">Ethical Implications</a> section on bias, transparency, and accountability</li>
+                        <li>Consult the <a href="regulations.html">Regulatory Landscape</a> section for legal frameworks governing AI systems</li>
+                        <li>Visit the <a href="references.html">References</a> page for academic research and policy documents</li>
+                    </ul>
+                </section>
+
+                <div class="page-navigation">
+                    <a href="ethics.html" class="prev-link">← Ethical Implications</a>
+                    <a href="glossary.html" class="next-link">Glossary →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-text">This project is part of the Humanities in the Age of AI course from UCF, designed and developed by Isabelle Bianca Sampaio (<a href="https://github.com/isabellebisam" target="_blank" rel="noopener">@isabellebisam</a>). All rights reserved. 2025.</p>
+            <p class="version">Version 1.0</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/demo-p5.js"></script>
+</body>
+</html>

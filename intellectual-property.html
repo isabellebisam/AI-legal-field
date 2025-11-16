@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI and intellectual property: copyright, authorship, training data, and liability issues">
+    <title>AI in Intellectual Property | AI in Legal Practice</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">AI in Legal Practice</h1>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="what-is-ai.html">What is AI?</a></li>
+                        <li><a href="digital-law.html">Digital Law</a></li>
+                        <li><a href="intellectual-property.html" class="active">Intellectual Property</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                        <li><a href="ethics.html">Ethics</a></li>
+                        <li><a href="demo.html">Interactive Demo</a></li>
+                        <li><a href="glossary.html">Glossary</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <article class="page-article">
+            <div class="container">
+                <h2>AI and Intellectual Property</h2>
+
+                <section class="content-section">
+                    <p class="intro">Generative AI fundamentally challenges traditional intellectual property frameworks. Questions of authorship, infringement, fair use, and liability—developed over centuries for human creators—must now be reconsidered for machines that create, remix, and distribute content at unprecedented scale. This section examines how AI intersects with IP law, focusing on copyright, though similar issues arise in patent and trademark law.</p>
+                </section>
+
+                <section class="content-section">
+                    <h3>1. AI and Copyright: The Authorship Question</h3>
+
+                    <h4>Can AI Be an Author?</h4>
+
+                    <p>Copyright law traditionally grants protection to original works of authorship. But what happens when the "author" is an AI system?</p>
+
+                    <h4>The Human Authorship Requirement</h4>
+
+                    <p>Most jurisdictions require human creativity for copyright protection. This principle has been tested in several landmark cases:</p>
+
+                    <div class="case-study">
+                        <h5>Thaler v. Vidal (US, 2022-2024)</h5>
+                        <p><strong>Facts:</strong> Stephen Thaler sought copyright registration for an image created entirely by his AI system, DABUS, listing the AI as author.</p>
+                        <p><strong>US Copyright Office Decision:</strong> Denied registration, stating copyright requires human authorship.</p>
+                        <p><strong>Court Ruling:</strong> The D.C. Circuit affirmed, holding that the Copyright Act's "authorship" presumes human creativity. The Supreme Court declined to hear the case in 2024.</p>
+                        <p><strong>Significance:</strong> Establishes that purely AI-generated works cannot be copyrighted in the US—at least not with AI as the listed author.</p>
+                    </div>
+
+                    <div class="case-study">
+                        <h5>Zarya of the Dawn (US Copyright Office, 2023)</h5>
+                        <p><strong>Facts:</strong> Kristina Kashtanova created a graphic novel using Midjourney for images and human-written text.</p>
+                        <p><strong>Copyright Office Decision:</strong> Copyright protects the human-authored text and the selection/arrangement of images, but not the individual AI-generated images themselves.</p>
+                        <p><strong>Significance:</strong> Introduces a layered approach—human creative contributions are protectable, even when combined with AI-generated elements that are not.</p>
+                    </div>
+
+                    <h4>International Perspectives</h4>
+
+                    <ul>
+                        <li><strong>UK:</strong> Copyright and Designs and Patents Act (Section 9) allows protection for "computer-generated works" where "there is no human author," granting copyright to "the person by whom the arrangements necessary for the creation of the work are undertaken." Duration: 50 years from creation.</li>
+                        <li><strong>Australia and New Zealand:</strong> Similar provisions for computer-generated works.</li>
+                        <li><strong>EU:</strong> Generally requires human intellectual creation; no explicit provision for AI authorship. Likely to align with human authorship requirement.</li>
+                        <li><strong>China:</strong> Courts have shown willingness to protect AI-generated content when significant human involvement exists in the creation process.</li>
+                    </ul>
+
+                    <h4>The "Human in the Loop" Spectrum</h4>
+
+                    <p>Authorship may depend on the degree of human involvement:</p>
+
+                    <!-- Placeholder for authorship spectrum diagram -->
+                    <div class="visual-placeholder">
+                        <p><em>[Diagram: Authorship Spectrum - Fully Automated (AI only, no copyright) ↔ AI-Assisted (human directs, copyrightable) ↔ AI as Tool (human creates with AI assistance, clearly copyrightable)]</em></p>
+                    </div>
+
+                    <ul>
+                        <li><strong>AI as pure creator:</strong> No human input beyond pressing "generate." Likely not copyrightable.</li>
+                        <li><strong>AI with human direction:</strong> Detailed prompting, curation, iteration. Potentially copyrightable based on human creative choices.</li>
+                        <li><strong>AI as tool:</strong> Human creates using AI capabilities (e.g., Photoshop's AI tools). Clearly copyrightable.</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h3>2. Training Data and Copyright Infringement</h3>
+
+                    <h4>The Core Question</h4>
+
+                    <p>Generative AI models are trained on billions of copyrighted works—books, articles, images, music, code—often scraped from the internet without permission. Is this copyright infringement?</p>
+
+                    <h4>Arguments for Fair Use</h4>
+
+                    <p>AI developers argue training constitutes fair use under US law (or similar exceptions elsewhere) because:</p>
+
+                    <ul>
+                        <li><strong>Transformative purpose:</strong> Training doesn't reproduce works for the same purpose; it extracts patterns to create new capabilities</li>
+                        <li><strong>Non-expressive use:</strong> Training data becomes statistical weights, not stored copies</li>
+                        <li><strong>No market harm:</strong> The model doesn't substitute for the original works</li>
+                        <li><strong>Socially beneficial:</strong> AI advances technology, research, and access to information</li>
+                    </ul>
+
+                    <p>Legal precedents cited include:</p>
+                    <ul>
+                        <li><em>Authors Guild v. Google</em> (2015): Google Books scanning for search held to be fair use</li>
+                        <li><em>Perfect 10 v. Amazon</em> (2007): Thumbnail images for search held transformative</li>
+                    </ul>
+
+                    <h4>Arguments Against Fair Use</h4>
+
+                    <p>Rights holders and creators argue training is infringement because:</p>
+
+                    <ul>
+                        <li><strong>Commercial purpose:</strong> AI companies profit from training on others' creative work without compensation</li>
+                        <li><strong>Market substitution:</strong> AI-generated content competes with human creators (e.g., stock images, illustrations, articles)</li>
+                        <li><strong>Licensing alternatives exist:</strong> If companies can train on licensed data, fair use shouldn't apply</li>
+                        <li><strong>Reproduction occurs:</strong> Initial copying of training data, even if transformed later, requires permission</li>
+                    </ul>
+
+                    <h4>Key Ongoing Litigation</h4>
+
+                    <div class="case-study">
+                        <h5>Andersen v. Stability AI, Midjourney, DeviantArt (N.D. Cal., 2023-present)</h5>
+                        <p><strong>Plaintiffs:</strong> Artists Sarah Andersen, Kelly McKernan, Karla Ortiz</p>
+                        <p><strong>Claims:</strong> Direct copyright infringement (training), vicarious infringement (generated outputs), DMCA violations (removal of copyright management information), right of publicity, unfair competition</p>
+                        <p><strong>Status:</strong> Partially survived motion to dismiss; discovery ongoing</p>
+                        <p><strong>Significance:</strong> First major case challenging image generation AI on copyright grounds</p>
+                    </div>
+
+                    <div class="case-study">
+                        <h5>Getty Images v. Stability AI (D. Del., 2023-present; UK High Court, 2023-present)</h5>
+                        <p><strong>Plaintiff:</strong> Getty Images (stock photo agency)</p>
+                        <p><strong>Claims:</strong> Copyright infringement for training on 12+ million Getty images; trademark infringement (models sometimes generate Getty watermarks)</p>
+                        <p><strong>Status:</strong> Parallel litigation in US and UK; discovery phase</p>
+                        <p><strong>Significance:</strong> Involves major commercial plaintiff with documented licensing alternatives</p>
+                    </div>
+
+                    <div class="case-study">
+                        <h5>The New York Times v. OpenAI & Microsoft (S.D.N.Y., 2023-present)</h5>
+                        <p><strong>Plaintiff:</strong> The New York Times</p>
+                        <p><strong>Claims:</strong> Copyright infringement for training on NYT articles; GPT models can reproduce articles verbatim when prompted</p>
+                        <p><strong>Status:</strong> Active litigation; OpenAI disputes claims of verbatim reproduction</p>
+                        <p><strong>Significance:</strong> Major publisher with clear commercial licensing model; focus on memorization and reproduction</p>
+                    </div>
+
+                    <div class="case-study">
+                        <h5>Authors Guild v. OpenAI (S.D.N.Y., 2023-present)</h5>
+                        <p><strong>Plaintiffs:</strong> Authors including John Grisham, George R.R. Martin, Jodi Picoult (class action)</p>
+                        <p><strong>Claims:</strong> Copyright infringement for training on books without permission</p>
+                        <p><strong>Status:</strong> Discovery phase; OpenAI filed motion to dismiss certain claims</p>
+                        <p><strong>Significance:</strong> Tests whether book authors have standing and whether training constitutes fair use</p>
+                    </div>
+
+                    <h4>International Developments</h4>
+
+                    <ul>
+                        <li><strong>EU:</strong> Copyright Directive Article 4 (text and data mining exception) allows training for research, but commercial use may require licensing</li>
+                        <li><strong>Japan:</strong> Copyright Act Article 30-4 permits training without permission, regardless of commercial purpose</li>
+                        <li><strong>UK:</strong> Proposed (but shelved) TDM exception for commercial AI training; current law uncertain</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h3>3. AI Outputs and Derivative Works</h3>
+
+                    <h4>When Does AI Output Infringe?</h4>
+
+                    <p>Even if training is permissive, AI-generated outputs may infringe if they're substantially similar to copyrighted works.</p>
+
+                    <h4>Degrees of Similarity</h4>
+
+                    <ul>
+                        <li><strong>Verbatim reproduction:</strong> Model outputs near-identical copies of training data (e.g., lyrics, code snippets, articles). Clear infringement if substantial.</li>
+                        <li><strong>Stylistic similarity:</strong> Output mimics an artist's distinctive style but doesn't copy specific works. Legal status uncertain—style generally not copyrightable, but close cases may differ.</li>
+                        <li><strong>Conceptual similarity:</strong> Output shares themes, ideas, or concepts with existing works. Generally permissible under the idea/expression dichotomy.</li>
+                    </ul>
+
+                    <h4>The Memorization Problem</h4>
+
+                    <p>AI models can "memorize" training data, especially:</p>
+                    <ul>
+                        <li>When specific examples appear many times in training</li>
+                        <li>For unique or distinctive content</li>
+                        <li>When models are large relative to training data</li>
+                    </ul>
+
+                    <p>Research shows models can be prompted to reproduce training data verbatim in some cases, raising infringement concerns.</p>
+
+                    <h4>Who Is Liable?</h4>
+
+                    <p>When AI generates infringing content, liability is unclear:</p>
+
+                    <ul>
+                        <li><strong>AI developer:</strong> Liable for contributory or vicarious infringement?</li>
+                        <li><strong>User who prompted generation:</strong> Direct infringer if they distribute the output?</li>
+                        <li><strong>Platform hosting the AI:</strong> Safe harbor under DMCA 512 or liable for facilitating infringement?</li>
+                    </ul>
+
+                    <p>The secondary liability framework developed for P2P file sharing (Napster, Grokster) may provide analogies, but AI's technical differences complicate application.</p>
+                </section>
+
+                <section class="content-section">
+                    <h3>4. AI-Generated Works as Derivative Works</h3>
+
+                    <h4>Copyright's Derivative Work Right</h4>
+
+                    <p>Copyright owners have the exclusive right to create "derivative works"—new works based on the original (translations, adaptations, remixes).</p>
+
+                    <h4>Are AI Modifications Derivative Works?</h4>
+
+                    <p>When AI transforms copyrighted content, is the output a derivative work requiring permission?</p>
+
+                    <div class="info-box">
+                        <h5>Image Modification</h5>
+                        <p>AI tools that edit, extend, or stylize existing images (e.g., DALL-E's outpainting, style transfer) create outputs based on copyrighted inputs. If the original remains recognizable, this likely constitutes a derivative work.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h5>Music Remixing</h5>
+                        <p>AI that generates variations on copyrighted music (changing instrumentation, tempo, style) may create unauthorized derivatives, even if substantially transformed.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h5>Text Summarization and Paraphrasing</h5>
+                        <p>AI-generated summaries or paraphrases of copyrighted text occupy uncertain territory. If factual, not protected; if expressive and recognizable, potentially infringing.</p>
+                    </div>
+
+                    <h4>Fair Use Defense for Derivatives</h4>
+
+                    <p>Derivative works may qualify as fair use if sufficiently transformative:</p>
+                    <ul>
+                        <li>Parody and satire (protected under <em>Campbell v. Acuff-Rose Music</em>)</li>
+                        <li>Criticism and commentary</li>
+                        <li>Educational transformations</li>
+                    </ul>
+
+                    <p>AI-generated derivatives could potentially claim fair use, but the analysis is fact-specific and commercially motivated AI use may weigh against fair use.</p>
+                </section>
+
+                <section class="content-section">
+                    <h3>5. Practical and Policy Implications</h3>
+
+                    <h4>The Licensing Response</h4>
+
+                    <p>Some AI developers are pursuing licensing agreements:</p>
+
+                    <ul>
+                        <li><strong>OpenAI:</strong> Licensing deals with publishers (AP, Axel Springer), stock photo agencies (Shutterstock)</li>
+                        <li><strong>Adobe:</strong> Firefly trained exclusively on licensed Adobe Stock and public domain content</li>
+                        <li><strong>Stability AI:</strong> Partnerships with Getty Images for licensed training data</li>
+                    </ul>
+
+                    <p>This approach avoids litigation but raises concerns about:</p>
+                    <ul>
+                        <li>Market concentration (only large companies can afford licenses)</li>
+                        <li>Exclusion of individual creators and small publishers</li>
+                        <li>Potential for unfair licensing terms due to power imbalances</li>
+                    </ul>
+
+                    <h4>Technical Solutions</h4>
+
+                    <ul>
+                        <li><strong>Opt-out mechanisms:</strong> robots.txt, "do not train" metadata tags</li>
+                        <li><strong>Provenance and watermarking:</strong> Embedding signals in AI outputs to identify their origin</li>
+                        <li><strong>Filtering and blocklists:</strong> Preventing models from reproducing specific works</li>
+                        <li><strong>Attribution systems:</strong> Tracking which training data influenced specific outputs</li>
+                    </ul>
+
+                    <p>Technical solutions face challenges: opt-outs may be ignored, watermarks can be removed, and attribution is computationally difficult.</p>
+
+                    <h4>Proposed Regulatory Approaches</h4>
+
+                    <ul>
+                        <li><strong>Compulsory licensing:</strong> Require AI developers to pay royalties to rights holders, similar to music streaming</li>
+                        <li><strong>Transparency mandates:</strong> Require disclosure of training data sources</li>
+                        <li><strong>Consent requirements:</strong> Mandate opt-in permission for training data</li>
+                        <li><strong>Sui generis rights:</strong> Create new IP category specifically for AI-generated works</li>
+                    </ul>
+
+                    <h4>The Creator Economy Impact</h4>
+
+                    <p>AI's effect on creative professions is already visible:</p>
+
+                    <ul>
+                        <li>Stock photography and illustration markets disrupted by AI generation</li>
+                        <li>Freelance writers competing with AI-generated content</li>
+                        <li>Musicians facing AI-generated soundalikes</li>
+                        <li>Programmers' code used to train Copilot and similar tools</li>
+                    </ul>
+
+                    <p>The economic sustainability of creative labor is at stake, with implications beyond copyright law for labor policy, cultural production, and economic inequality.</p>
+                </section>
+
+                <section class="content-section">
+                    <h3>6. Beyond Copyright: Other IP Considerations</h3>
+
+                    <h4>Patent Law</h4>
+
+                    <p>Similar authorship questions arise in patent law:</p>
+                    <ul>
+                        <li>Can AI be listed as an inventor? (Generally no, per <em>Thaler v. Vidal</em> for patents as well)</li>
+                        <li>Are AI-assisted inventions patentable if humans contributed?</li>
+                        <li>How to disclose AI's role in the inventive process?</li>
+                    </ul>
+
+                    <h4>Trademark Law</h4>
+
+                    <p>AI creates trademark issues when:</p>
+                    <ul>
+                        <li>Generating logos or brand names that resemble existing trademarks</li>
+                        <li>Creating content that causes consumer confusion about source or sponsorship</li>
+                        <li>Infringing on trademark owners' rights of publicity and persona</li>
+                    </ul>
+
+                    <h4>Trade Secret Law</h4>
+
+                    <p>AI trained on proprietary data may expose trade secrets:</p>
+                    <ul>
+                        <li>Models leaking confidential information in outputs</li>
+                        <li>Training on scraped data that includes trade secrets</li>
+                        <li>Reverse engineering risks from AI-generated content</li>
+                    </ul>
+                </section>
+
+                <section class="content-section">
+                    <h3>Conclusion</h3>
+
+                    <p>AI challenges IP law's foundational assumptions about human creativity, originality, and commercial fairness. Courts, legislatures, and regulatory bodies worldwide are grappling with how to adapt centuries-old frameworks to machine-generated content.</p>
+
+                    <p>The outcomes of current litigation and regulatory efforts will shape not only AI development but the future of creative labor, cultural production, and information access. Balancing innovation incentives with creator rights remains the central challenge.</p>
+                </section>
+
+                <div class="page-navigation">
+                    <a href="digital-law.html" class="prev-link">← AI in Digital Law</a>
+                    <a href="regulations.html" class="next-link">Regulatory Landscape →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-text">This project is part of the Humanities in the Age of AI course from UCF, designed and developed by Isabelle Bianca Sampaio (<a href="https://github.com/isabellebisam" target="_blank" rel="noopener">@isabellebisam</a>). All rights reserved. 2025.</p>
+            <p class="version">Version 1.0</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+</body>
+</html>
