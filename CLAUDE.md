@@ -100,6 +100,13 @@ git push -u origin <branch-name>
 
 GitHub Pages deployment is automatic once pushed to the appropriate branch.
 
+### GitHub Pages Setup
+1. Go to repository Settings → Pages
+2. Under "Source", select branch (e.g., `main` or feature branch)
+3. Select folder: `/ (root)`
+4. Save and wait ~1-2 minutes for deployment
+5. Access at: `https://<username>.github.io/AI-legal-field/`
+
 ## Architecture
 
 ### Navigation System
@@ -279,6 +286,41 @@ Target browsers:
 Known limitations:
 - IE11 not supported (uses CSS Grid, ES6)
 - Older mobile browsers may have limited CSS support
+
+## Troubleshooting
+
+### Demo Not Loading
+- **Check browser console** for JavaScript errors
+- Verify `demo-cases.json` is accessible (check path in demo.js)
+- Ensure P5.js CDN is loading (check network tab)
+- Try clearing browser cache
+
+### Navigation Menu Not Working on Mobile
+- Check that `navigation.js` is loaded
+- Verify mobile-menu-toggle class is on button element
+- Test that JavaScript is enabled in browser
+
+### Styles Not Applying
+- Confirm CSS files are linked in correct order (main.css → pages.css → demo.css)
+- Check for CSS syntax errors in browser dev tools
+- Verify file paths are correct (relative to HTML file)
+
+### Demo Algorithm Logic
+
+The AI recommendation system in `demo.js` (`calculateRecommendation` function) works as follows:
+
+1. **Base Accuracy**: Determined by model type (fast: 70%, balanced: 80%, slow: 88%)
+2. **Bias Factor**: Training data quality affects error rate (biased: 30% error prone, diverse: 5%)
+3. **Sensitivity**: Higher values increase false positive rate
+4. **Fair Use Factor**: More permissive threshold favors transformative uses
+
+The algorithm intentionally simulates real-world AI behavior including:
+- Errors based on model accuracy
+- Systematic bias toward over-flagging (false positives)
+- Sensitivity-dependent threshold adjustments
+- Fair use consideration for transformative content
+
+This creates educational scenarios where users experience tradeoffs between precision and recall.
 
 ## Notes for Future Developers
 
